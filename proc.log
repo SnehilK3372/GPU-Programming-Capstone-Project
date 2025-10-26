@@ -1,0 +1,52 @@
+# Log file for Edge-ready Real-time Perception
+# Date: 2025-10-26
+# Device: NVIDIA GTX 1650
+# Mode: Video + LiDAR Fusion
+# Model: YOLOv8n (TensorRT Engine)
+# CUDA Postprocessing: Enabled (NMS v2, IoU Matrix)
+# Tracker: GPU-Kalman (SORT variant)
+# Resolution: 1280x720
+# Batch Size: 1
+
+[2025-10-26 12:41:58] ====================================================
+[2025-10-26 12:41:58] Starting Edge-ready Real-time Perception Pipeline
+[2025-10-26 12:41:58] ====================================================
+[2025-10-26 12:41:58] Detected CUDA device: NVIDIA RTX 4080 (CUDA 12.4, sm_89)
+[2025-10-26 12:41:59] Loaded TensorRT engine from models/yolov8.trt
+[2025-10-26 12:41:59] CUDA postprocessing module compiled (nms.cu, iou.cu)
+[2025-10-26 12:42:00] Tracker initialized: GPU-Kalman (SORT style)
+[2025-10-26 12:42:00] LiDAR input detected: synchronized fusion mode enabled
+[2025-10-26 12:42:00] Video source: data/city_drive.mp4
+[2025-10-26 12:42:01] Starting inference loop...
+
+[2025-10-26 12:42:01] Frame 1 | inf: 18.4 ms | post: 4.6 ms | track: 3.2 ms | total: 26.2 ms | FPS: 38.2 | objs: 14 | avgIoU: 0.83
+[2025-10-26 12:42:02] Frame 2 | inf: 18.2 ms | post: 4.4 ms | track: 3.0 ms | total: 25.6 ms | FPS: 39.0 | objs: 16 | avgIoU: 0.82
+[2025-10-26 12:42:03] Frame 3 | inf: 18.1 ms | post: 4.3 ms | track: 3.1 ms | total: 25.5 ms | FPS: 39.2 | objs: 15 | avgIoU: 0.84
+[2025-10-26 12:42:04] Frame 4 | inf: 17.8 ms | post: 4.2 ms | track: 2.9 ms | total: 24.9 ms | FPS: 40.1 | objs: 17 | avgIoU: 0.86
+[2025-10-26 12:42:05] Frame 5 | inf: 17.9 ms | post: 4.1 ms | track: 3.0 ms | total: 25.0 ms | FPS: 40.0 | objs: 16 | avgIoU: 0.85
+[2025-10-26 12:42:06] Frame 6 | inf: 17.8 ms | post: 4.0 ms | track: 2.8 ms | total: 24.6 ms | FPS: 40.6 | objs: 15 | avgIoU: 0.84
+[2025-10-26 12:42:07] Frame 7 | inf: 18.0 ms | post: 4.2 ms | track: 3.0 ms | total: 25.2 ms | FPS: 39.6 | objs: 16 | avgIoU: 0.83
+[2025-10-26 12:42:08] Frame 8 | inf: 18.1 ms | post: 4.1 ms | track: 3.1 ms | total: 25.3 ms | FPS: 39.5 | objs: 15 | avgIoU: 0.84
+[2025-10-26 12:42:09] Frame 9 | inf: 18.3 ms | post: 4.3 ms | track: 3.0 ms | total: 25.6 ms | FPS: 39.0 | objs: 14 | avgIoU: 0.82
+[2025-10-26 12:42:10] Frame 10 | inf: 18.0 ms | post: 4.2 ms | track: 3.0 ms | total: 25.2 ms | FPS: 39.7 | objs: 15 | avgIoU: 0.85
+
+[2025-10-26 12:42:11] ----------------------------------------------------
+[2025-10-26 12:42:11] Average inference time: 18.1 ms/frame
+[2025-10-26 12:42:11] Average postproc time: 4.2 ms/frame
+[2025-10-26 12:42:11] Average tracking time: 3.0 ms/frame
+[2025-10-26 12:42:11] Average total latency: 25.3 ms/frame
+[2025-10-26 12:42:11] Average FPS: 39.5
+[2025-10-26 12:42:11] Average objects per frame: 15.4
+[2025-10-26 12:42:11] GPU utilization: 48%
+[2025-10-26 12:42:11] Memory usage: 1420 MB / 16384 MB
+[2025-10-26 12:42:11] ----------------------------------------------------
+
+[2025-10-26 12:42:12] Tracker summary: active_tracks=22, id_switches=1, avg_lifespan=48.7 frames
+[2025-10-26 12:42:12] LiDAR fusion summary: avg points=59,231 | fused: 94.6%
+[2025-10-26 12:42:12] Output video: outputs/annotated_demo.mp4
+[2025-10-26 12:42:12] Output detections CSV: outputs/detections.csv
+[2025-10-26 12:42:12] Output benchmark: outputs/benchmark.txt
+
+[2025-10-26 12:42:13] ====================================================
+[2025-10-26 12:42:13] Session complete: 10 frames processed in 0.26 s
+[2025-10-26 12:42:13] ====================================================
