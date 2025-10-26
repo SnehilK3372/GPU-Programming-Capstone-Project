@@ -62,7 +62,7 @@ A `run.sh` helper (or equivalent) is provided that:
 6. Runs the demo and writes outputs.
 
 Example:
-```bash
+bash
 # make run.sh executable once, then run:
 chmod +x run.sh
 ./run.sh
