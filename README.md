@@ -86,7 +86,7 @@ If a TensorRT engine (.trt) is present, the demo will preferentially use it for 
 
 
 
-Pipeline (high level)
+### Pipeline (high level)
 
 Input: read and buffer camera frames and (if available) LiDAR sweeps. Time-synchronize using timestamps.
 
@@ -94,7 +94,7 @@ Preprocess: resize / normalize images, voxelize or downsample LiDAR as needed. U
 
 Inference: run detector/segmenter model on GPU (TorchScript/TensorRT).
 
-CUDA Postproc:
+### CUDA Postproc:
 
 Compute bounding boxes and mask rasterization on GPU.
 
@@ -106,7 +106,7 @@ Tracking: compute affinity (IoU, embedding distance) on GPU; association (Hungar
 
 Visualization & Logging: overlay boxes/masks/IDs, write視頻 frames, emit JSON/CSV logs and metrics.
 
-Output formats
+### Output formats
 
 Video: annotated MP4 with bounding boxes, masks, track IDs, and FPS overlay.
 
@@ -118,7 +118,7 @@ Benchmark: text or CSV containing experiment, input_res, batch, inference_ms, po
 
 Profiler artifacts: Nsight or nvprof outputs for kernel timelines.
 
-Performance (example / reference)
+### Performance (example / reference)
 
 Measured on an RTX 3060 (single camera, batch=1, 640×384):
 
@@ -129,7 +129,7 @@ End-to-end FPS	~4–5 FPS	~25–30 FPS	~40–55 FPS
 
 Your numbers will vary by model, input resolution, GPU, and whether LiDAR fusion is enabled.
 
-Evaluation & Metrics
+### Evaluation & Metrics
 
 Detection: mAP@0.5, IoU distributions (optional if you have labeled frames).
 
@@ -145,7 +145,7 @@ baseline-cpu,640x384,1,180,70,250,4.00
 gpu-ts,640x384,1,30,6,36,27.78
 gpu-trt,640x384,1,18,6,24,41.66
 
-Jetson / Edge Notes
+### Jetson / Edge Notes
 
 Use JetPack and the device's recommended CUDA/cuDNN/TensorRT versions.
 
